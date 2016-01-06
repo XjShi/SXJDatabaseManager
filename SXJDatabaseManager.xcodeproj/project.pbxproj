@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		860859961C21BB150062EE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859951C21BB150062EE00 /* main.m */; };
+		860859991C21BB150062EE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859981C21BB150062EE00 /* AppDelegate.m */; };
+		8608599C1C21BB150062EE00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8608599B1C21BB150062EE00 /* ViewController.m */; };
+		8608599F1C21BB150062EE00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8608599D1C21BB150062EE00 /* Main.storyboard */; };
+		860859A11C21BB150062EE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860859A01C21BB150062EE00 /* Assets.xcassets */; };
+		860859A41C21BB150062EE00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860859A21C21BB150062EE00 /* LaunchScreen.storyboard */; };
+		860859AF1C21BB150062EE00 /* SXJDatabaseManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859AE1C21BB150062EE00 /* SXJDatabaseManagerTests.m */; };
+		860859BF1C21BB400062EE00 /* NSObject+SXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859BB1C21BB400062EE00 /* NSObject+SXJ.m */; };
+		860859C01C21BB400062EE00 /* SXJDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */; };
+		860859C11C21BB400062EE00 /* typeEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 860859BE1C21BB400062EE00 /* typeEncoding.plist */; };
+		D12183DC6079EB65944D6537 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C5D77187D2B4489B09094E /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		860859AB1C21BB150062EE00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 860859891C21BB150062EE00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 860859901C21BB150062EE00;
+			remoteInfo = SXJDatabaseManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37436760210F5095D5C8985D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		860859911C21BB150062EE00 /* SXJDatabaseManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXJDatabaseManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		860859951C21BB150062EE00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		860859971C21BB150062EE00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		860859981C21BB150062EE00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8608599A1C21BB150062EE00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8608599B1C21BB150062EE00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8608599E1C21BB150062EE00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		860859A01C21BB150062EE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		860859A31C21BB150062EE00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		860859A51C21BB150062EE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860859AA1C21BB150062EE00 /* SXJDatabaseManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXJDatabaseManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		860859AE1C21BB150062EE00 /* SXJDatabaseManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManagerTests.m; sourceTree = "<group>"; };
+		860859B01C21BB150062EE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860859BA1C21BB400062EE00 /* NSObject+SXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXJ.h"; sourceTree = "<group>"; };
+		860859BB1C21BB400062EE00 /* NSObject+SXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXJ.m"; sourceTree = "<group>"; };
+		860859BC1C21BB400062EE00 /* SXJDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXJDatabaseManager.h; sourceTree = "<group>"; };
+		860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManager.m; sourceTree = "<group>"; };
+		860859BE1C21BB400062EE00 /* typeEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeEncoding.plist; sourceTree = "<group>"; };
+		A9C5D77187D2B4489B09094E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B55FC16504838A0F326300 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8608598E1C21BB150062EE00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12183DC6079EB65944D6537 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860859A71C21BB150062EE00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80122FE2C4F1A0FA8A65B04A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37436760210F5095D5C8985D /* Pods.debug.xcconfig */,
+				B7B55FC16504838A0F326300 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		860859881C21BB150062EE00 = {
+			isa = PBXGroup;
+			children = (
+				860859931C21BB150062EE00 /* SXJDatabaseManager */,
+				860859AD1C21BB150062EE00 /* SXJDatabaseManagerTests */,
+				860859921C21BB150062EE00 /* Products */,
+				80122FE2C4F1A0FA8A65B04A /* Pods */,
+				DA2A3A555D61BE47141485BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		860859921C21BB150062EE00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				860859911C21BB150062EE00 /* SXJDatabaseManager.app */,
+				860859AA1C21BB150062EE00 /* SXJDatabaseManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		860859931C21BB150062EE00 /* SXJDatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				860859B91C21BB400062EE00 /* DB */,
+				860859971C21BB150062EE00 /* AppDelegate.h */,
+				860859981C21BB150062EE00 /* AppDelegate.m */,
+				8608599A1C21BB150062EE00 /* ViewController.h */,
+				8608599B1C21BB150062EE00 /* ViewController.m */,
+				8608599D1C21BB150062EE00 /* Main.storyboard */,
+				860859A01C21BB150062EE00 /* Assets.xcassets */,
+				860859A21C21BB150062EE00 /* LaunchScreen.storyboard */,
+				860859A51C21BB150062EE00 /* Info.plist */,
+				860859941C21BB150062EE00 /* Supporting Files */,
+			);
+			path = SXJDatabaseManager;
+			sourceTree = "<group>";
+		};
+		860859941C21BB150062EE00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				860859951C21BB150062EE00 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		860859AD1C21BB150062EE00 /* SXJDatabaseManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				860859AE1C21BB150062EE00 /* SXJDatabaseManagerTests.m */,
+				860859B01C21BB150062EE00 /* Info.plist */,
+			);
+			path = SXJDatabaseManagerTests;
+			sourceTree = "<group>";
+		};
+		860859B91C21BB400062EE00 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				860859BA1C21BB400062EE00 /* NSObject+SXJ.h */,
+				860859BB1C21BB400062EE00 /* NSObject+SXJ.m */,
+				860859BC1C21BB400062EE00 /* SXJDatabaseManager.h */,
+				860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */,
+				860859BE1C21BB400062EE00 /* typeEncoding.plist */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		DA2A3A555D61BE47141485BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9C5D77187D2B4489B09094E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		860859901C21BB150062EE00 /* SXJDatabaseManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860859B31C21BB150062EE00 /* Build configuration list for PBXNativeTarget "SXJDatabaseManager" */;
+			buildPhases = (
+				E5312EBE897CE6DF5A93DF30 /* Check Pods Manifest.lock */,
+				8608598D1C21BB150062EE00 /* Sources */,
+				8608598E1C21BB150062EE00 /* Frameworks */,
+				8608598F1C21BB150062EE00 /* Resources */,
+				1179E43A818367518F2B53C6 /* Embed Pods Frameworks */,
+				336B01CB6B1EA44C1CE57CF8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SXJDatabaseManager;
+			productName = SXJDatabaseManager;
+			productReference = 860859911C21BB150062EE00 /* SXJDatabaseManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		860859A91C21BB150062EE00 /* SXJDatabaseManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860859B61C21BB150062EE00 /* Build configuration list for PBXNativeTarget "SXJDatabaseManagerTests" */;
+			buildPhases = (
+				860859A61C21BB150062EE00 /* Sources */,
+				860859A71C21BB150062EE00 /* Frameworks */,
+				860859A81C21BB150062EE00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				860859AC1C21BB150062EE00 /* PBXTargetDependency */,
+			);
+			name = SXJDatabaseManagerTests;
+			productName = SXJDatabaseManagerTests;
+			productReference = 860859AA1C21BB150062EE00 /* SXJDatabaseManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		860859891C21BB150062EE00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jzkj;
+				TargetAttributes = {
+					860859901C21BB150062EE00 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					860859A91C21BB150062EE00 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 860859901C21BB150062EE00;
+					};
+				};
+			};
+			buildConfigurationList = 8608598C1C21BB150062EE00 /* Build configuration list for PBXProject "SXJDatabaseManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 860859881C21BB150062EE00;
+			productRefGroup = 860859921C21BB150062EE00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				860859901C21BB150062EE00 /* SXJDatabaseManager */,
+				860859A91C21BB150062EE00 /* SXJDatabaseManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8608598F1C21BB150062EE00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860859A41C21BB150062EE00 /* LaunchScreen.storyboard in Resources */,
+				860859C11C21BB400062EE00 /* typeEncoding.plist in Resources */,
+				860859A11C21BB150062EE00 /* Assets.xcassets in Resources */,
+				8608599F1C21BB150062EE00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860859A81C21BB150062EE00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1179E43A818367518F2B53C6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		336B01CB6B1EA44C1CE57CF8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5312EBE897CE6DF5A93DF30 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8608598D1C21BB150062EE00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860859C01C21BB400062EE00 /* SXJDatabaseManager.m in Sources */,
+				8608599C1C21BB150062EE00 /* ViewController.m in Sources */,
+				860859BF1C21BB400062EE00 /* NSObject+SXJ.m in Sources */,
+				860859991C21BB150062EE00 /* AppDelegate.m in Sources */,
+				860859961C21BB150062EE00 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860859A61C21BB150062EE00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860859AF1C21BB150062EE00 /* SXJDatabaseManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		860859AC1C21BB150062EE00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 860859901C21BB150062EE00 /* SXJDatabaseManager */;
+			targetProxy = 860859AB1C21BB150062EE00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8608599D1C21BB150062EE00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8608599E1C21BB150062EE00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		860859A21C21BB150062EE00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860859A31C21BB150062EE00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		860859B11C21BB150062EE00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		860859B21C21BB150062EE00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		860859B41C21BB150062EE00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37436760210F5095D5C8985D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SXJDatabaseManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jzkj.SXJDatabaseManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		860859B51C21BB150062EE00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B55FC16504838A0F326300 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SXJDatabaseManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jzkj.SXJDatabaseManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		860859B71C21BB150062EE00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SXJDatabaseManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jzkj.SXJDatabaseManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SXJDatabaseManager.app/SXJDatabaseManager";
+			};
+			name = Debug;
+		};
+		860859B81C21BB150062EE00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SXJDatabaseManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jzkj.SXJDatabaseManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SXJDatabaseManager.app/SXJDatabaseManager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8608598C1C21BB150062EE00 /* Build configuration list for PBXProject "SXJDatabaseManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860859B11C21BB150062EE00 /* Debug */,
+				860859B21C21BB150062EE00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860859B31C21BB150062EE00 /* Build configuration list for PBXNativeTarget "SXJDatabaseManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860859B41C21BB150062EE00 /* Debug */,
+				860859B51C21BB150062EE00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860859B61C21BB150062EE00 /* Build configuration list for PBXNativeTarget "SXJDatabaseManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860859B71C21BB150062EE00 /* Debug */,
+				860859B81C21BB150062EE00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 860859891C21BB150062EE00 /* Project object */;
+}
