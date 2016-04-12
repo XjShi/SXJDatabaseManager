@@ -119,7 +119,7 @@
             NSString *sql = [self insertSqlString:model propertyListWithValueDictionary:propertyDict];
             retValue = [db executeUpdate:sql withArgumentsInArray:[propertyDict allValues]];
             if (!retValue) {
-                NSLog(@"insert data error:%@",db.lastError.localizedDescription);
+                [self logWithName:@"insert data error" description:db.lastError.localizedDescription];
                 *rollback = YES;
                 break;
             }
@@ -209,7 +209,7 @@
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
         if (!retValue) {
-            NSLog(@"删除表错误:%@",db.lastError.localizedDescription);
+            [self logWithName:@"delete table error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -227,7 +227,7 @@
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
         if (!retValue) {
-            NSLog(@"更新表错误:%@",db.lastError.localizedDescription);
+            [self logWithName:@"update table error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -244,7 +244,7 @@
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
         if (retValue) {
-            NSLog(@"清空表记录:%@",db.lastError.localizedDescription);
+            [self logWithName:@"clear table record error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -258,7 +258,7 @@
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
         if (!retValue) {
-            NSLog(@"删除记录错误:%@",db.lastError.localizedDescription);
+            [self logWithName:@"delete table error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -282,7 +282,7 @@
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
         if (!retValue) {
-            NSLog(@"添加约束失败 ：%@",db.lastError.localizedDescription);
+            [self logWithName:@"add trigger error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -293,7 +293,7 @@
     [self.queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql withArgumentsInArray:arguments];
         if (!retValue) {
-            NSLog(@"executeUpdate error:%@",db.lastError.localizedDescription);
+            [self logWithName:@"executeUpdate error" description:db.lastError.localizedDescription];
         }
     }];
     return retValue;
@@ -325,6 +325,18 @@
         [rs close];
     }];
     return resultArray;
+}
+
+- (BOOL)isTableExist:(NSString *)tableName {
+    NSString *sql = @"SELECT name FROM sqlite_master WHERE type='table' AND name=%@";
+    __block BOOL result = NO;
+    [_queue inDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:sql,tableName];
+        if ([rs next]) {
+            result = YES;
+        }
+    }];
+    return result;
 }
 
 #pragma mark - Inner Method
@@ -446,4 +458,14 @@ propertyListWithValueDictionary:(NSDictionary *)propertyDict
     }
     return  [NSString stringWithFormat:sql,NSStringFromClass([model class]),columnNameStr,valueStr];
 }
+
+/**
+ *  打印错误信息
+ */
+- (void)logWithName:(NSString *)name description:(NSString *)description {
+    if (_isDebugModeEnabled) {
+        NSLog(@"%@:%@",name,description);
+    }
+}
+
 @end

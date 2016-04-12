@@ -11,8 +11,11 @@
 
 @interface SXJDatabaseManager : NSObject
 
-@property (nonatomic,strong,readonly) FMDatabaseQueue *queue;
 + (SXJDatabaseManager *)sharedManager;
+
+@property (nonatomic,strong,readonly) FMDatabaseQueue *queue;
+
+@property (nonatomic,assign) BOOL isDebugModeEnabled;
 
 /**
  *  根据aClass创建表
@@ -115,9 +118,7 @@
 /**
  *  给指定的表添加只保存最新count条记录的触发器
  *
- *  @param orderOption <#orderOption description#>
- *
- *  @return YES：降序；NO：升序。
+ *  @param orderOption YES：降序；NO：升序。
  */
 - (BOOL)addKeepNewTriggerToTable:(Class)aClass count:(NSInteger)count orderedBy:(NSString *)columnName orderedDescend:(BOOL)orderOption;
 
@@ -132,6 +133,13 @@
  *  @return 查询结果转化为字典，存放在数组中
  */
 - (NSArray *)executeQuery:(NSString *)sql withArguments:(NSArray *)args;
+
+/**
+ *  判断表是否存在
+ *
+ *  @param tableName 表明
+ */
+- (BOOL)isTableExist:(NSString *)tableName;
 
 - (NSString *)sqlStringFromClass:(id)model otherColumnNames:(NSArray *)namesArray;
 - (NSString *)insertSqlString:(id)model propertyListWithValueDictionary:(NSDictionary *)propertyDict;
