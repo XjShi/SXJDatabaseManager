@@ -1,6 +1,4 @@
 //
-//  NSObject+SXJ.m
-//
 //  Created by xjshi on 15/7/23.
 //  Copyright (c) 2015年 xjshi. All rights reserved.
 //

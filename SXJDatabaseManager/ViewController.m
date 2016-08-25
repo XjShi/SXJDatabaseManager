@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -17,11 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Method method = class_getClassMethod([self class], @selector(testWithStr:integerValue:));
+    unsigned int numberOfArguments = method_getNumberOfArguments(method);
+    for (NSInteger i = 0; i < numberOfArguments; i++) {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
++ (void)testWithStr:(NSString *)str integerValue:(NSInteger)integerValue {
+    
 }
 
 @end

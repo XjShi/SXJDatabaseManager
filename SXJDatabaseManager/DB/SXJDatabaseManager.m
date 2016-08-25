@@ -1,6 +1,4 @@
 //
-//  DatabaseManager.m
-//
 //  Created by xjshi on 15/7/23.
 //  Copyright (c) 2015年 xjshi. All rights reserved.
 //
@@ -32,7 +30,7 @@
                                       @"unsigned long",
                                       @"unsigned long long"];
     NSArray *numericAffinityTypes = @[@"NSDate"];
-    NSArray *realAffinityType = @[@"double"];
+    NSArray *realAffinityType = @[@"double",@"float"];
     NSArray *blobAffinityType = @[@"NSData"];
     
     if ([textAffinityTypes containsObject:type]) {
@@ -57,7 +55,7 @@
     static SXJDatabaseManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[[self class] alloc] init];
+        manager = [[super allocWithZone:nil] init];
     });
     return manager;
 }
@@ -69,6 +67,22 @@
         NSString *dbPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:dbName];
         _queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
     }
+    return self;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [self sharedManager];
+}
+
++ (instancetype)alloc {
+    return [self sharedManager];
+}
+
+- (instancetype)copy {
+    return self;
+}
+
+- (instancetype)mutableCopy {
     return self;
 }
 
@@ -343,20 +357,6 @@
 - (NSString *)sqlStringFromClass:(id)model {
     return [self sqlStringFromClass:model otherColumnNames:nil];
 }
-
-//- (NSString *)sqlStringFromClass:(id)model otherColumnNames:(NSArray *)namesArray
-//{
-//    NSDictionary *propertyDict = [model propertyListWithValue:NO];
-//    NSArray *propertyNameArray = [propertyDict allKeys];
-//    NSMutableArray *tmpArr = [propertyNameArray mutableCopy];
-//    if (namesArray != nil && namesArray.count) {
-//        [tmpArr addObjectsFromArray:namesArray];
-//    }
-//    
-//    NSString *sql = [tmpArr componentsJoinedByString:@" text,"];
-//    sql = [sql stringByAppendingString:@" text"];
-//    return sql;
-//}
 
 - (NSString *)sqlStringFromClass:(id)model otherColumnNames:(NSArray *)namesArray {
     NSDictionary *propertyDict = [model propertyListWithType];
