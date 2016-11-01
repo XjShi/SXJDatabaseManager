@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
+#import "Rectangle.h"
+#import "SXJDatabaseManager.h"
 
 @interface ViewController ()
 
@@ -18,11 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    Method method = class_getClassMethod([self class], @selector(testWithStr:integerValue:));
-    unsigned int numberOfArguments = method_getNumberOfArguments(method);
-    for (NSInteger i = 0; i < numberOfArguments; i++) {
-        
-    }
+//    Method method = class_getClassMethod([self class], @selector(testWithStr:integerValue:));
+//    unsigned int numberOfArguments = method_getNumberOfArguments(method);
+//    for (NSInteger i = 0; i < numberOfArguments; i++) {
+//        
+//    }
+    
+    SXJDatabaseManager *manager = [SXJDatabaseManager sharedManager];
+    [manager createTable:[Rectangle class]];
+    [manager createTableWithClass:[Rectangle class] primaryKeyNameArray:@[@"name"]];
+    
+    Rectangle *rect = [Rectangle new];
+    rect.name = @"rectangle1";
+    rect.width = 10;
+    rect.length = 25;
+    [manager insertModel:rect];
+    
+    NSDictionary *cond = @{@"name": @"rectangle1"};
+    [manager deleteRecordFromTable:[Rectangle class] condition:cond];
+    
 }
 
 - (void)didReceiveMemoryWarning {

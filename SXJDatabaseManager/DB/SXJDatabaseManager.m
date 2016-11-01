@@ -342,7 +342,7 @@
 }
 
 - (BOOL)isTableExist:(NSString *)tableName {
-    NSString *sql = @"SELECT name FROM sqlite_master WHERE type='table' AND name=%@";
+    NSString *sql = @"SELECT name FROM sqlite_master WHERE type='table' AND name=?";
     __block BOOL result = NO;
     [_queue inDatabase:^(FMDatabase *db) {
         FMResultSet *rs = [db executeQuery:sql,tableName];
