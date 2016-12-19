@@ -52,10 +52,7 @@
     return resultDict;
 }
 
-#pragma mark - Inner Method
-/**
- *  从属性的类型编码得到人们容易理解的类型
- */
+#pragma mark - Private Method
 - (NSString *)typeOfProperty:(objc_property_t)property {
     NSString *propertyAttribute = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
     if ([propertyAttribute hasPrefix:@"T@,"]) {

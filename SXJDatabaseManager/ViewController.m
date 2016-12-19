@@ -19,12 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    Method method = class_getClassMethod([self class], @selector(testWithStr:integerValue:));
-//    unsigned int numberOfArguments = method_getNumberOfArguments(method);
-//    for (NSInteger i = 0; i < numberOfArguments; i++) {
-//        
-//    }
     
     SXJDatabaseManager *manager = [SXJDatabaseManager sharedManager];
     [manager createTable:[Rectangle class]];
@@ -44,10 +38,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-+ (void)testWithStr:(NSString *)str integerValue:(NSInteger)integerValue {
-    
 }
 
 @end

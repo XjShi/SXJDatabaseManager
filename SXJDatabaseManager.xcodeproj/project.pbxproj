@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7DD042E91DC8A3CC009DD65F /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD042E81DC8A3CC009DD65F /* Rectangle.m */; };
+		7DFD4D4A1E07DE41007F2C5D /* NSObject+SXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */; };
+		7DFD4D4B1E07DE41007F2C5D /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D461E07DE41007F2C5D /* readme.md */; };
+		7DFD4D4C1E07DE41007F2C5D /* SXJDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */; };
+		7DFD4D4D1E07DE41007F2C5D /* typeEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */; };
 		860859961C21BB150062EE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859951C21BB150062EE00 /* main.m */; };
 		860859991C21BB150062EE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859981C21BB150062EE00 /* AppDelegate.m */; };
 		8608599C1C21BB150062EE00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8608599B1C21BB150062EE00 /* ViewController.m */; };
@@ -15,9 +19,6 @@
 		860859A11C21BB150062EE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860859A01C21BB150062EE00 /* Assets.xcassets */; };
 		860859A41C21BB150062EE00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860859A21C21BB150062EE00 /* LaunchScreen.storyboard */; };
 		860859AF1C21BB150062EE00 /* SXJDatabaseManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859AE1C21BB150062EE00 /* SXJDatabaseManagerTests.m */; };
-		860859BF1C21BB400062EE00 /* NSObject+SXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859BB1C21BB400062EE00 /* NSObject+SXJ.m */; };
-		860859C01C21BB400062EE00 /* SXJDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */; };
-		860859C11C21BB400062EE00 /* typeEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 860859BE1C21BB400062EE00 /* typeEncoding.plist */; };
 		D12183DC6079EB65944D6537 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C5D77187D2B4489B09094E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,12 @@
 		37436760210F5095D5C8985D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD042E71DC8A3CC009DD65F /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		7DD042E81DC8A3CC009DD65F /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		7DFD4D441E07DE41007F2C5D /* NSObject+SXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXJ.h"; sourceTree = "<group>"; };
+		7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXJ.m"; sourceTree = "<group>"; };
+		7DFD4D461E07DE41007F2C5D /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		7DFD4D471E07DE41007F2C5D /* SXJDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXJDatabaseManager.h; sourceTree = "<group>"; };
+		7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManager.m; sourceTree = "<group>"; };
+		7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeEncoding.plist; sourceTree = "<group>"; };
 		860859911C21BB150062EE00 /* SXJDatabaseManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXJDatabaseManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860859951C21BB150062EE00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		860859971C21BB150062EE00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,11 +55,6 @@
 		860859AA1C21BB150062EE00 /* SXJDatabaseManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXJDatabaseManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860859AE1C21BB150062EE00 /* SXJDatabaseManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManagerTests.m; sourceTree = "<group>"; };
 		860859B01C21BB150062EE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		860859BA1C21BB400062EE00 /* NSObject+SXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXJ.h"; sourceTree = "<group>"; };
-		860859BB1C21BB400062EE00 /* NSObject+SXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXJ.m"; sourceTree = "<group>"; };
-		860859BC1C21BB400062EE00 /* SXJDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXJDatabaseManager.h; sourceTree = "<group>"; };
-		860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManager.m; sourceTree = "<group>"; };
-		860859BE1C21BB400062EE00 /* typeEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeEncoding.plist; sourceTree = "<group>"; };
 		A9C5D77187D2B4489B09094E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B55FC16504838A0F326300 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DFD4D431E07DE41007F2C5D /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				7DFD4D441E07DE41007F2C5D /* NSObject+SXJ.h */,
+				7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */,
+				7DFD4D461E07DE41007F2C5D /* readme.md */,
+				7DFD4D471E07DE41007F2C5D /* SXJDatabaseManager.h */,
+				7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */,
+				7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */,
+			);
+			path = DB;
+			sourceTree = SOURCE_ROOT;
+		};
 		80122FE2C4F1A0FA8A65B04A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +123,7 @@
 		860859931C21BB150062EE00 /* SXJDatabaseManager */ = {
 			isa = PBXGroup;
 			children = (
-				860859B91C21BB400062EE00 /* DB */,
+				7DFD4D431E07DE41007F2C5D /* DB */,
 				860859971C21BB150062EE00 /* AppDelegate.h */,
 				860859981C21BB150062EE00 /* AppDelegate.m */,
 				8608599A1C21BB150062EE00 /* ViewController.h */,
@@ -139,18 +154,6 @@
 				860859B01C21BB150062EE00 /* Info.plist */,
 			);
 			path = SXJDatabaseManagerTests;
-			sourceTree = "<group>";
-		};
-		860859B91C21BB400062EE00 /* DB */ = {
-			isa = PBXGroup;
-			children = (
-				860859BA1C21BB400062EE00 /* NSObject+SXJ.h */,
-				860859BB1C21BB400062EE00 /* NSObject+SXJ.m */,
-				860859BC1C21BB400062EE00 /* SXJDatabaseManager.h */,
-				860859BD1C21BB400062EE00 /* SXJDatabaseManager.m */,
-				860859BE1C21BB400062EE00 /* typeEncoding.plist */,
-			);
-			path = DB;
 			sourceTree = "<group>";
 		};
 		DA2A3A555D61BE47141485BB /* Frameworks */ = {
@@ -246,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				860859A41C21BB150062EE00 /* LaunchScreen.storyboard in Resources */,
-				860859C11C21BB400062EE00 /* typeEncoding.plist in Resources */,
+				7DFD4D4D1E07DE41007F2C5D /* typeEncoding.plist in Resources */,
 				860859A11C21BB150062EE00 /* Assets.xcassets in Resources */,
 				8608599F1C21BB150062EE00 /* Main.storyboard in Resources */,
 			);
@@ -314,11 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860859C01C21BB400062EE00 /* SXJDatabaseManager.m in Sources */,
+				7DFD4D4C1E07DE41007F2C5D /* SXJDatabaseManager.m in Sources */,
 				8608599C1C21BB150062EE00 /* ViewController.m in Sources */,
-				860859BF1C21BB400062EE00 /* NSObject+SXJ.m in Sources */,
 				860859991C21BB150062EE00 /* AppDelegate.m in Sources */,
+				7DFD4D4A1E07DE41007F2C5D /* NSObject+SXJ.m in Sources */,
 				860859961C21BB150062EE00 /* main.m in Sources */,
+				7DFD4D4B1E07DE41007F2C5D /* readme.md in Sources */,
 				7DD042E91DC8A3CC009DD65F /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
