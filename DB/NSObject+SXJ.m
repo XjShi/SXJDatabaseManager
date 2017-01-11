@@ -33,6 +33,7 @@
             [resultDict setObject:[NSNull null] forKey:propertyName];
         }
     }
+    free(propertyList);
     return resultDict;
 }
 
@@ -49,6 +50,7 @@
         NSString *propertyType = [self typeOfProperty:property];
         [resultDict setObject:propertyType forKey:propertyName];
     }
+    free(propertyList);
     return resultDict;
 }
 
