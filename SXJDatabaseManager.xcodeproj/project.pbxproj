@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7DD042E91DC8A3CC009DD65F /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD042E81DC8A3CC009DD65F /* Rectangle.m */; };
 		7DFD4D4A1E07DE41007F2C5D /* NSObject+SXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */; };
-		7DFD4D4B1E07DE41007F2C5D /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D461E07DE41007F2C5D /* readme.md */; };
 		7DFD4D4C1E07DE41007F2C5D /* SXJDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */; };
 		7DFD4D4D1E07DE41007F2C5D /* typeEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */; };
 		860859961C21BB150062EE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 860859951C21BB150062EE00 /* main.m */; };
@@ -38,7 +37,6 @@
 		7DD042E81DC8A3CC009DD65F /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
 		7DFD4D441E07DE41007F2C5D /* NSObject+SXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXJ.h"; sourceTree = "<group>"; };
 		7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXJ.m"; sourceTree = "<group>"; };
-		7DFD4D461E07DE41007F2C5D /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		7DFD4D471E07DE41007F2C5D /* SXJDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXJDatabaseManager.h; sourceTree = "<group>"; };
 		7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManager.m; sourceTree = "<group>"; };
 		7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeEncoding.plist; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 			children = (
 				7DFD4D441E07DE41007F2C5D /* NSObject+SXJ.h */,
 				7DFD4D451E07DE41007F2C5D /* NSObject+SXJ.m */,
-				7DFD4D461E07DE41007F2C5D /* readme.md */,
 				7DFD4D471E07DE41007F2C5D /* SXJDatabaseManager.h */,
 				7DFD4D481E07DE41007F2C5D /* SXJDatabaseManager.m */,
 				7DFD4D491E07DE41007F2C5D /* typeEncoding.plist */,
@@ -322,7 +319,6 @@
 				860859991C21BB150062EE00 /* AppDelegate.m in Sources */,
 				7DFD4D4A1E07DE41007F2C5D /* NSObject+SXJ.m in Sources */,
 				860859961C21BB150062EE00 /* main.m in Sources */,
-				7DFD4D4B1E07DE41007F2C5D /* readme.md in Sources */,
 				7DD042E91DC8A3CC009DD65F /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

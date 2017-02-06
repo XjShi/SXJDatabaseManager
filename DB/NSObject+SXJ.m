@@ -46,7 +46,8 @@
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
     for (u_int i = 0; i < count; ++i) {
         objc_property_t property = propertyList[i];
-        NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        NSString *propertyName = [NSString stringWithCString:property_getName(property)
+                                                    encoding:NSUTF8StringEncoding];
         NSString *propertyType = [self typeOfProperty:property];
         [resultDict setObject:propertyType forKey:propertyName];
     }
@@ -56,7 +57,8 @@
 
 #pragma mark - Private Method
 - (NSString *)typeOfProperty:(objc_property_t)property {
-    NSString *propertyAttribute = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
+    NSString *propertyAttribute = [NSString stringWithCString:property_getAttributes(property)
+                                                     encoding:NSUTF8StringEncoding];
     if ([propertyAttribute hasPrefix:@"T@,"]) {
         return @"id";
     }

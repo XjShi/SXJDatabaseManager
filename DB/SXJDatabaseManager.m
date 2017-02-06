@@ -18,7 +18,7 @@
     NSArray *textAffinityTypes = @[@"char",
                                    @"char *",
                                    @"NSString",
-                                   @"NSNumber"];    //最好不在模型中使用NSNumber，如果存在，就存为"text"类型
+                                   @"NSNumber"];
     NSArray *integerAffinityTypes = @[@"bool",  //BOOL
                                       @"int",
                                       @"short",
@@ -64,7 +64,8 @@
     if (self = [super init]) {
         NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
         NSString *dbName = [bundleName stringByAppendingPathExtension:@"sqlite"];
-        NSString *dbPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:dbName];
+        NSString *dbPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
+                            stringByAppendingPathComponent:dbName];
         _queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
     }
     return self;
@@ -100,7 +101,9 @@
 }
 
 - (BOOL)createTableWithClass:(Class)aClass otherColumnNames:(NSArray *)names primaryKeyNameArray:(NSArray *)array {
-    NSString *tmpStr = [NSString stringWithFormat:@"%@, constraint default_constraint primary key(%@)",[self sqlStringFromClass:aClass otherColumnNames:names],[array componentsJoinedByString:@","]];
+    NSString *tmpStr = [NSString stringWithFormat:@"%@, constraint default_constraint primary key(%@)",
+                        [self sqlStringFromClass:aClass otherColumnNames:names],
+                        [array componentsJoinedByString:@","]];
     return [self createTableWithTableName:NSStringFromClass(aClass) detail:tmpStr];
 }
 
@@ -109,7 +112,6 @@
     return [self executeUpdate:sql withArguments:nil];
 }
 
-//插入一条数据
 - (BOOL)insertModel:(id)model {
     NSDictionary *propertyDict = [model propertyListWithValue:YES];
     NSString *sql = [self insertSqlString:model propertyListWithValueDictionary:propertyDict];
@@ -124,7 +126,6 @@
     return [self executeUpdate:sql withArguments:valuesArray];
 }
 
-//像表中插入一组数据
 - (BOOL)insertModelArray:(NSArray *)array {
     __block BOOL retValue;
     [_queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
@@ -142,7 +143,6 @@
     return retValue;
 }
 
-//查询表中所有记录
 - (NSArray *)selectAllRecord:(Class)aClass {
     NSMutableArray *resultArray = [NSMutableArray array];
     NSString *sql = [NSString stringWithFormat:@"select * from %@",NSStringFromClass(aClass)];
