@@ -15,11 +15,10 @@
 @implementation SXJDatabaseManager (DataTypeAffinity)
 
 - (NSString *)affinityType:(NSString *)type {
-    NSArray *textAffinityTypes = @[@"char",
-                                   @"char *",
-                                   @"NSString",
+    NSArray *textAffinityTypes = @[@"NSString",
                                    @"NSNumber"];
-    NSArray *integerAffinityTypes = @[@"bool",  //BOOL
+    NSArray *integerAffinityTypes = @[@"BOOL",
+                                      @"bool",  //BOOL
                                       @"int",
                                       @"short",
                                       @"long",
@@ -29,19 +28,16 @@
                                       @"unsigned short",
                                       @"unsigned long",
                                       @"unsigned long long"];
-    NSArray *numericAffinityTypes = @[@"NSDate"];
-    NSArray *realAffinityType = @[@"double",@"float"];
-    NSArray *blobAffinityType = @[@"NSData"];
+    NSArray *realAffinityTypes = @[@"double",@"float"];
+    NSArray *blobAffinityTypes = @[@"NSData"];
     
     if ([textAffinityTypes containsObject:type]) {
         return @"text";
     } else if ([integerAffinityTypes containsObject:type]) {
         return @"integer";
-    } else if ([numericAffinityTypes containsObject:type]) {
-        return @"numeric";
-    } else if ([realAffinityType containsObject:type]) {
+    } else if ([realAffinityTypes containsObject:type]) {
         return @"real";
-    } else if ([blobAffinityType containsObject:type]) {
+    } else if ([blobAffinityTypes containsObject:type]) {
         return @"blob";
     }
     return nil;
@@ -182,7 +178,7 @@
         }
     }
     sql = [sql stringByAppendingString:conditionSql];
-    sql = [NSString stringWithFormat:sql,NSStringFromClass(aClass)];
+    sql = [NSString stringWithFormat:sql, NSStringFromClass(aClass)];
     return [self executeQuery:sql withArguments:conditionValueArray elementClass:aClass];
 }
 
@@ -213,7 +209,7 @@
     }
     sql = [sql stringByAppendingString:conditionSql];
     sql = [sql stringByAppendingString:orderSql];
-    sql = [NSString stringWithFormat:sql,NSStringFromClass(aClass),columnName,orderOption];
+    sql = [NSString stringWithFormat:sql, NSStringFromClass(aClass), columnName, orderOption];
     return [self executeQuery:sql withArguments:conditionValueArray elementClass:aClass];
 }
 
@@ -236,7 +232,7 @@
     NSString *sql = @"update %@ set %@ where %@";
     NSString *setSql = [self dictionary2StrigWithComma:dict];
     NSString *conditionSql = [self dictionary2StrigWithComma:conditionDict];
-    sql = [NSString stringWithFormat:sql,NSStringFromClass(aClass),setSql,conditionSql];
+    sql = [NSString stringWithFormat:sql,NSStringFromClass(aClass), setSql, conditionSql];
     __block BOOL retValue;
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
@@ -253,7 +249,7 @@
 }
 
 - (BOOL)deleteAllRecord:(Class)aClass {
-    NSString *sql = [NSString stringWithFormat:@"delete from %@",NSStringFromClass(aClass)];
+    NSString *sql = [NSString stringWithFormat:@"delete from %@", NSStringFromClass(aClass)];
     __block BOOL retValue;
     [_queue inDatabase:^(FMDatabase *db) {
         retValue = [db executeUpdate:sql];
@@ -345,7 +341,7 @@
     NSString *sql = @"SELECT name FROM sqlite_master WHERE type='table' AND name=?";
     __block BOOL result = NO;
     [_queue inDatabase:^(FMDatabase *db) {
-        FMResultSet *rs = [db executeQuery:sql,tableName];
+        FMResultSet *rs = [db executeQuery:sql, tableName];
         if ([rs next]) {
             result = YES;
         }
@@ -374,7 +370,7 @@
             //key是模型中的字段
             NSString *type = propertyDict[key]; //原始类型
             NSString *affinityType = [self affinityType:type];
-            [str appendString:[NSString stringWithFormat:@" %@",affinityType]];
+            [str appendString:[NSString stringWithFormat:@" %@", affinityType]];
         } else {
             //key是额外指定的字段
             [str appendString:@" text"];
@@ -402,13 +398,13 @@
     NSArray *setKeyArray = [dict allKeys];
     for (NSInteger i = 0; i < setKeyArray.count; ++i) {
         NSString *key = setKeyArray[i];
-        NSString *setStr = [NSString stringWithFormat:@"%@='%@'",key,[dict objectForKey:key]];
+        NSString *setStr = [NSString stringWithFormat:@"%@='%@'", key, [dict objectForKey:key]];
         [setArray addObject:setStr];
     }
     return [setArray componentsJoinedByString:separator];
 }
 
-//生成这样的语句:  insert into tablename(column1,column2,column3) values(?,?,?)
+//insert into tablename(column1,column2,column3) values(?,?,?)
 - (NSString *)insertSqlString:(id)model propertyListWithValueDictionary:(NSDictionary *)propertyDict {
     NSString *sql = @"insert into %@(%@) values(%@)";
     NSArray *propertyNameArray = [propertyDict allKeys];
@@ -425,7 +421,7 @@
             [valueStr appendString:@"?"];
         }
     }
-    return  [NSString stringWithFormat:sql,NSStringFromClass([model class]),columnNameStr,valueStr];
+    return  [NSString stringWithFormat:sql, NSStringFromClass([model class]), columnNameStr, valueStr];
 }
 
 /*  生成insert语句：insert into tablename(column1,column2,column3) values(?,?,?)
@@ -456,7 +452,7 @@ propertyListWithValueDictionary:(NSDictionary *)propertyDict
             [valueStr appendString:@"?"];
         }
     }
-    return  [NSString stringWithFormat:sql,NSStringFromClass([model class]),columnNameStr,valueStr];
+    return  [NSString stringWithFormat:sql, NSStringFromClass([model class]), columnNameStr, valueStr];
 }
 
 /**
@@ -464,7 +460,7 @@ propertyListWithValueDictionary:(NSDictionary *)propertyDict
  */
 - (void)logWithName:(NSString *)name description:(NSString *)description {
     if (_isDebugModeEnabled) {
-        NSLog(@"%@:%@",name,description);
+        NSLog(@"%@: %@", name, description);
     }
 }
 

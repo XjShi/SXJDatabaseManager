@@ -1,6 +1,36 @@
 # SXJDatabaseManager
-结合objc的runtime，对[FMDB](https://github.com/ccgus/fmdb)的进一步封装，可方便快捷的对单个模型进行CRUD操作。如：	
+结合 objc 的 runtime ，对 [FMDB](https://github.com/ccgus/fmdb) 的进一步封装，实现的 ORM 工具库。
 
+## 开发背景
+在开发一个社交类项目的时候，项目有由大量实体需要使用数据库缓存。为避免编写大量的样板代码，开发该 ORM 工具。该工具在此项目中工作良好，并在公司其它项目中得到广泛使用。
+
+## 细节
+### 支持的数据类型及 type affinity
+type | type affinity |
+--- | --- |
+int | integer
+short | integer
+long | integer
+long long | integer
+unsigned int | integer
+unsigned short | integer
+unsigned long | integer
+unsigned long long | integer
+float | real
+double | real
+BOOL | integer
+NSString | text
+NSNumber | text
+NSData | blob
+
+> 注意：`NSInteger`、`NSTimeInterval` 等都是通过 typedef 定义的，这样的类型也是支持的。
+> 
+> 目前不支持`bool`（C++ 的 bool）、`signed char`、`char`、`char *`、`unsigned char`、`id`、`Class`及不在上边列表里的类类型。
+
+## 安装
+下载该工程，把 DB 目录及其下的四个文件添加进你的工程中即可。
+
+## 用法
 ~~~objc
 @interface Rectangle : NSObject
 
@@ -47,3 +77,4 @@ NSDictionary *cond = @{@"name": @"rectangle1"};
 
 更多用法，请直接参考`SXJDatabaseManager.h`中的api。
 
+如果您有任何建议，可以通过任何方式联系我。

@@ -57,6 +57,22 @@
 
 #pragma mark - Private Method
 - (NSString *)typeOfProperty:(objc_property_t)property {
+    static NSDictionary *typeEncodingMap = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        typeEncodingMap = @{@"i": @"int",
+                            @"s": @"short",
+                            @"l": @"long",
+                            @"q": @"long long",
+                            @"I": @"unsigned int",
+                            @"S": @"unsigned short",
+                            @"L": @"unsigned long",
+                            @"Q": @"unsigned long long",
+                            @"f": @"float",
+                            @"d": @"double",
+                            @"B": @"BOOL"};
+    });
+    
     NSString *propertyAttribute = [NSString stringWithCString:property_getAttributes(property)
                                                      encoding:NSUTF8StringEncoding];
     if ([propertyAttribute hasPrefix:@"T@,"]) {
@@ -69,13 +85,8 @@
     } else if ([propertyAttribute hasPrefix:@"T#"]) {
         return @"Class";
     } else {
-        NSString *tmpStr = [propertyAttribute substringWithRange:NSMakeRange(1, 1)];
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"typeEncoding" ofType:@"plist"];
-        NSAssert(path, @"typeEncoding.plist doesn't exists!");
-        if (path) {
-            NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-            return [dict objectForKey:tmpStr];
-        }
+        NSString *typeEncoding = [propertyAttribute substringWithRange:NSMakeRange(1, 1)];
+        return [typeEncodingMap objectForKey:typeEncoding];
     }
     return nil;
 }
