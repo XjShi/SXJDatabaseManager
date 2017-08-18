@@ -5,6 +5,9 @@
 在开发一个社交类项目的时候，项目有由大量实体需要使用数据库缓存。为避免编写大量的样板代码，开发该 ORM 工具。该工具在此项目中工作良好，并在公司其它项目中得到广泛使用。
 
 ## 细节
+### 支持的架构
+当前版本仅支持 amr64 架构的设备。
+
 ### 支持的数据类型及 type affinity
 type | type affinity |
 --- | --- |
@@ -23,9 +26,9 @@ NSString | text
 NSNumber | text
 NSData | blob
 
-> 注意：`NSInteger`、`NSTimeInterval` 等都是通过 typedef 定义的，这样的类型也是支持的。
+> 注意：`NSInteger`、`NSTimeInterval` 等实际都是通过 typedef 定义的原声数据类型，这样的类型也是支持的。
 > 
-> 目前不支持`bool`（C++ 的 bool）、`signed char`、`char`、`char *`、`unsigned char`、`id`、`Class`及不在上边列表里的类类型。
+> 目前不支持`bool`（C++ 的 bool）、`signed char`、`char`、原生数据类型的指针(`int *`、`char *`等)、`unsigned char`、`id`、`Class`及不在上边列表里的类类型。
 
 ## 安装
 下载该工程，把 DB 目录及其下的四个文件添加进你的工程中即可。

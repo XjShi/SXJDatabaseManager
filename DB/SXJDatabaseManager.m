@@ -23,7 +23,7 @@
                                       @"short",
                                       @"long",
                                       @"long long",
-                                      @"unsigned char", //Boolean
+                                      @"unsigned char",
                                       @"unsigned int",
                                       @"unsigned short",
                                       @"unsigned long",
